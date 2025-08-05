@@ -1,1 +1,2 @@
-# apiNewman
+# run test
+npm run test
