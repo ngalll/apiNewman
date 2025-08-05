@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "15a97c99-60e3-4a48-ab31-6ba215a7cc8b",
+		"name": "nasaApiToken",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47208519",
+		"_collection_link": "https://gna57188-7955332.postman.co/workspace/gna57188's-Workspace~486776b2-5a9b-445b-8f87-664dcb5267d6/collection/47208519-15a97c99-60e3-4a48-ab31-6ba215a7cc8b?action=share&source=collection_link&creator=47208519"
+	},
+	"item": [
+		{
+			"name": "apod",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?date=2025-07-16&api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-07-16"
+						},
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodStartDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?start_date=2025-07-16&api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2025-07-16"
+						},
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodEndDate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?start_date=2025-07-01&end_date=2025-07-16&api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2025-07-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2025-07-16"
+						},
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodCount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4&count=5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						},
+						{
+							"key": "count",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodThumbs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Access-Control header is present\", function () {",
+							"    pm.response.to.have.header(\"Access-Control-Expose-Headers\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes media_type\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"media_type\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4&thumbs=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "JzaeM8dMrWZzUG3ZdpLQa2epUNbO13aSFosayUY4"
+						},
+						{
+							"key": "thumbs",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apodNoApiKey",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.expect(pm.response.code).to.equal(403);",
+							"});",
+							"",
+							"pm.test(\"X-Api-Umbrella-Request-Id header is present\", function () {",
+							"    pm.response.to.have.header(\"X-Api-Umbrella-Request-Id\");",
+							"});",
+							"",
+							"pm.test(\"Response body includes message\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
